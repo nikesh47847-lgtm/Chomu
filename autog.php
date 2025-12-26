@@ -12,7 +12,7 @@ function error(string $message, $price = null, string $gateway = 'NONE', $cc = n
         'Status'  => $status,
         'Gateway' => $gateway,
         'Price'=> $price,
-        'Message'   => $message,
+        'Response'   => $message,
         'Retries' => $retryCount,
     ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     
@@ -27,7 +27,7 @@ function SucessError(string $message, $price = null, string $gateway = 'NONE', $
         'Status'  => 'Success',
         'Gateway' => $gateway,
         'Price'=> $price,
-        'Message'   => $message,
+        'Response'   => $message,
         'Retries' => $retryCount,
     ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     
